@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
+/**
+ * @author cnjtg
+ */
 @RestController
 @Slf4j
 public class PaymentConsulController {
