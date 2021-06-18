@@ -1,0 +1,11 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-customer-service
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+
+
