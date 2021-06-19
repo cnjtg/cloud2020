@@ -21,6 +21,7 @@
         <module>cloud-consul-order80</module>
         <module>cloud-provider-payment8004</module>
         <module>cloud-customerzk-order80</module>
+        <module>cloud-customer-feign-order80</module>
     </modules>
 
     <!-- 统一jar版本管理 -->
