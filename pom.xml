@@ -22,6 +22,8 @@
         <module>cloud-provider-payment8004</module>
         <module>cloud-customerzk-order80</module>
         <module>cloud-customer-feign-order80</module>
+        <module>cloud-provider-hystrix-payment8001</module>
+        <module>cloud-customer-feign-hystrix-order80</module>
     </modules>
 
     <!-- 统一jar版本管理 -->
