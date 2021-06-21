@@ -6,11 +6,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author cnjtg
+ * @slogan study hard and make progress every day
+ * @date 2021-06-20 11:22
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class PaymentMain8002 {
+public class Gateway9527Main {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8002.class, args);
+        SpringApplication.run(Gateway9527Main.class, args);
     }
 }

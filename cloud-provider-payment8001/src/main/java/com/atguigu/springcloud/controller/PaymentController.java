@@ -62,6 +62,11 @@ public class PaymentController {
         return this.discoveryClient;
     }
 
+    @GetMapping("/lb/{id}")
+    public String lb(@PathVariable("id")Integer id){
+        return serverPort+" id:"+ id;
+    }
+
     @GetMapping("/timeout")
     public String timeout(){
         try {

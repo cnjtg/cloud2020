@@ -28,8 +28,9 @@ public interface IPaymentService {
 
     /**
      * 熔断机制
-     * @param id
-     * @return
+     *
+     * @param id id
+     * @return {@link String}
      */
     String paymentCircuitBreak(Integer id);
 }

@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 付款控制器
+ *
+ * @author cnjtg
+ * @date 2021/06/20
+ */
 @RestController
 @Slf4j
 @RequestMapping("/payment")
@@ -39,6 +45,11 @@ public class PaymentController {
             return new CommonResult(500, "未找到,0_0");
         }
         return new CommonResult<>(200, "成功" + serverPort, payment);
+    }
+
+    @GetMapping("/lb/{id}")
+    public String lb(@PathVariable("id")Integer id){
+        return serverPort+" id:"+ id;
     }
     @GetMapping("/timeout")
     public String timeout(){

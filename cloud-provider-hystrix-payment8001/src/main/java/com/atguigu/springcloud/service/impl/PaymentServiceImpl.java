@@ -24,8 +24,6 @@ public class PaymentServiceImpl implements IPaymentService {
     //#############################服务降级###################################
 
     /**
-     * @param id
-     * @return
      * @HystrixCommand 指定降级时调用的类，
      * fallbackMethod 指定方法
      * commandProperties 指定降级的条件

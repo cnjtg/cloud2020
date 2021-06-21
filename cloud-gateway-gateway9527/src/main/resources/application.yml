@@ -1,0 +1,37 @@
+server:
+  port: 9527
+
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: payment_routh
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/get/**
+#          filters:
+#            - AdddRequestParameter=X-Request-Id,1024 #过滤工厂会在匹配的请求头，名称为X-Request-Id值为1024
+
+        - id: payment_routh2
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/lb/**
+            # 服务启动时间
+            - After=2021-06-20T12:40:29.554+08:00[Asia/Shanghai]
+
+
+eureka:
+  instance:
+    hostname: cloud-gateway-service
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+

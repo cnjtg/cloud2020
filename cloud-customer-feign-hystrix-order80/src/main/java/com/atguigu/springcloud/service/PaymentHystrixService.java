@@ -16,10 +16,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentHystrixServiceImpl.class   )
 public interface PaymentHystrixService {
 
+    /**
+     * 付款信息
+     *
+     * @param id id
+     * @return {@link String}
+     */
     @GetMapping("payment/info/{id}")
     String paymentInfo(@PathVariable("id") Integer id);
 
 
+    /**
+     * 付款信息错误
+     *
+     * @param id id
+     * @return {@link String}
+     */
     @GetMapping("payment/error/{id}")
     String paymentInfoError(@PathVariable("id") Integer id);
 }
